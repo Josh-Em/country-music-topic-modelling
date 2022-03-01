@@ -61,5 +61,6 @@ Now that we have a large collection of text files we can use them to train the m
 
 ### Discussion
 
-Each song in the heat map was chosen to represent a particular category as defined from the Hypothesis section. In the places of categories 1, 6, 7, and 8 we have respectievely Jonhy Lee's "Hey Bartender", Waylon Jennings' "Are You Sure Hank Would Have Done It This Way?", Tammy Wynette's "DIVORCE", and Phil Vassar's "This is God". Okay, let's test our hypothesis.
+Each song in the heat map was chosen to represent a particular category as defined from the Hypothesis section. In the places of categories 1, 6, 7, and 8 we have respectievely Jonhy Lee's "Hey Bartender", Waylon Jennings' "Are You Sure Hank Would Have Done It This Way?", Tammy Wynette's "DIVORCE", and Phil Vassar's "This is God". 
 
+From the heat map and list of topics, it's not immediately clear which topic belongs to which type of category. Take for example Johny Lee's Hey Bartender, a song that is  explicitly about drinking. According to the model, this song is most likely to belong to Topic 3. We might then assign Topic 3 as the Drinking category, **except** the words in the Topic 3 list do not make any reference to alcohol. We would probably need at least a 'beer' or 'whiskey' entry to justifiably give Topic 3 the Drinking category label. 
