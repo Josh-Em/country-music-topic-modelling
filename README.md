@@ -2,7 +2,7 @@
 
 ### Intro 
 
-#### 
+#### I spend most of my days applying for jobs and listening to Country Hayride on NTS radio so I thought, *why not make myself look more employable and study country music at the same time?* This project is heavily influenced by Melanie Walsh's course *Introduction to Cultural Analytics & Python* and much of the code was borrowed from the sections on Topic Modelling and Data Collection (API). I don't know you, but thank you Melanie for making your work publicly accessible!
 
 ### Hypothesis
 
@@ -77,17 +77,17 @@ Even though Alan Jackson's Drive is about remembering the fond memories his fath
 
 I feel like Topics 4 and 7 are almost two sides of the same coin but that Topic 7 is almost like the more mature, older, and wiser version of Topic 4. While Topic 4 concerns itself with 'country', 'trucks', and 'roads', Topic 7 thinks more about 'land', 'trains', and 'river'. The entries in both topics elicit images of nature and rural life. I'm tempted to label these categories as *modern rural nostalgia* and *oldies rural nostalgia*.
 
-Thus we have,
+#### Thus we have,
 ```
-🤠 **Falling in Love** 🤠
+🤠 Falling in Love 🤠
 
 ['love', 'know', 'never', 'heart', 'one', 'like', 'time', 'say', 'could', 'see', 'baby', 'let', 'way', 'still', 'ever', 'life', 'every', 'would', 'away', 'tell']
 
-🤠 **Tragedy** 🤠
+🤠 Tragedy 🤠
 
 ['gone', 'like', 'every', 'rain', 'time', 'long', 'night', 'miss', 'dance', 'song', 'hear', 'home', 'play', 'christmas', 'nobody', 'sweet', 'moon', 'sky', 'wind', 'santa']
 
-🤠 **Religion** 🤠
+🤠 Religion 🤠
 
 ['man', 'god', 'good', 'made', 'life', 'love', 'world', 'stand', 'sometimes', 'believe', 'people', 'woman', 'way', 'know', 'kind', 'make', 'cause', 'hard', 'rise', 'jesus']
 
@@ -95,7 +95,7 @@ Thus we have,
 
 ['got', 'ain', 'yeah', 'gonna', 'good', 'girl', 'like', 'one', 'get', 'know', 'cause', 'right', 'time', 'back', 'baby', 'night', 'take', 'think', 'lyrics', 'call']
 
-🤠 **Modern Rural Nostalgia** 🤠
+🤠 Modern Rural Nostalgia 🤠
 
 ['back', 'country', 'got', 'like', 'get', 'road', 'old', 'little', 'ride', 'town', 'yeah', 'ain', 'truck', 'girls', 'night', 'way', 'roll', 'real', 'boys', 'red']
 
@@ -103,12 +103,13 @@ Thus we have,
 
 ['wanna', 'like', 'baby', 'yeah', 'little', 'ooh', 'let', 'love', 'make', 'get', 'want', 'whoa', 'feel', 'take', 'come', 'hey', 'gotta', 'kiss', 'way', 'night']
 
-🤠 **Family/Mom & Dad** 🤠
+🤠 Family/Mom & Dad 🤠
 
 ['said', 'well', 'daddy', 'got', 'old', 'back', 'man', 'mama', 'like', 'boy', 'took', 'never', 'went', 'could', 'made', 'told', 'name', 'house', 'years', 'home']
 
-🤠 **Oldies Rural Nostalgia** 🤠
+🤠 Oldies Rural Nostalgia 🤠
 
 ['come', 'heaven', 'lord', 'one', 'day', 'home', 'need', 'away', 'well', 'take', 'land', 'texas', 'devil', 'river', 'angel', 'train', 'wind', 'soul', 'blue', 'water']
 ```
-
+### Comments
+ 
