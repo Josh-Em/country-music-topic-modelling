@@ -57,8 +57,9 @@ Now that we have a large collection of text files we can use them to train the m
 
 ['come', 'heaven', 'lord', 'one', 'day', 'home', 'need', 'away', 'well', 'take', 'land', 'texas', 'devil', 'river', 'angel', 'train', 'wind', 'soul', 'blue', 'water']
 ```
-
-![country_music_heatmap](https://user-images.githubusercontent.com/98699929/156208876-1854e7ff-01ed-46a8-8268-252370e1ab01.JPG)
+![country_music_heatmap](https://user-images.githubusercontent.com/98699929/156213827-5799f965-9cf5-4932-8df9-bab389c5191d.JPG)
 
 ### Discussion
+
+Each song in the heat map was chosen to represent a particular category as defined from the Hypothesis section. In the places of categories 1, 6, 7, and 8 we have respectievely Jonhy Lee's "Hey Bartender", Waylon Jennings' "Are You Sure Hank Would Have Done It This Way?", Tammy Wynette's "DIVORCE", and Phil Vassar's "This is God". Okay, let's test our hypothesis.
 
