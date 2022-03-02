@@ -2,7 +2,7 @@
 
 ### Intro 
 
-#### I spend most of my days applying for jobs and listening to Country Hayride on NTS radio so I thought, *why not make myself look more employable and study country music at the same time?* This project is heavily influenced by Melanie Walsh's course *Introduction to Cultural Analytics & Python* and much of the code was borrowed from the sections on Topic Modelling and Data Collection (API). I don't know you, but thank you Melanie for making your work publicly accessible!
+#### I spend most of my days applying for jobs and listening to Country Hayride on NTS radio so I thought, *why not make myself look more employable and study country music at the same time?* This project is heavily influenced by Melanie Walsh's course *Introduction to Cultural Analytics & Python* and much of the code was borrowed from the sections on Topic Modelling and Data Collection (API). Thank you Melanie for making your work publicly accessible!
 
 ### Hypothesis
 
