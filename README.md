@@ -1,26 +1,25 @@
 ## 🍻 country-music-topic-modelling
 
-### Intro 
-
 #### I spend most of my days applying for jobs and listening to Country Hayride on NTS radio so I thought, *why not make myself look more employable and study country music at the same time?* This project is heavily influenced by Melanie Walsh's course *Introduction to Cultural Analytics & Python* and much of the code was borrowed from the sections on Topic Modelling and Data Collection (API). Thank you Melanie for making your work publicly accessible!
 
-### Hypothesis
+#### Hypothesis
 
-#### Let us surmise that the majority of country and western music songs can be characterized by a combination of the following eight categories.
-1. Songs about drinking. E.g. Tom T. Hall - I Like Beer, Gary Stewart - Whiskey Trip, Jimmy Buffet - Margaritaville
-2. Songs about heart break. E.g. Billy Ray Cyrus - Achy Breaky Heart, Dolly Parton - I Will Always Love You 
-3. Songs about falling in love/being in love. E.g. Dolly Parton - Here You Come Again, Randy Travis - Forever and Ever Amen, Conway Twitty - Hello Darlin'
-4. Songs about rural life and/or urban withdrawal. E.g. John Denver - Take Me Home, Country Roads, Merle Haggard - Okie From Muskogee
-5. Songs about family. E.g. Alan Jackson - Drive (For Daddy Gene), CW McCall - Roses For Mama
-6. Songs about country music itself. E.g. George Jones- Who's Gonna Fill Their Shoes, Waylon Jennings - Luckenbach Texas
-7. Songs about tragedy. E.g. Townes Van Zandt - Tecumseh Valley, George Jones - Grand Tour
-8. Songs about religion. E.g. Willie Nelson - Seven Spanish Angels, Kitty Wells - It Wasn't God Who Made Honky Tonk Angels
-#### For example, In George Strait's hit All My Ex's Live in Texas, he reminisces on his childhood in Texas, tells us the towns in which his various exes live and explains that that is why he resides in Tennessee. Broadly speaking, the themes of the track are summarised by categories 2,4, and 6. I.e. Heartbreak (although the song's sound is rather jovial it is nonetheless about ex-partners), a longing for a simpler time in rural life (learning to swim in the Frio river), and an ode to the state of Texas, carrying with it a recognition of Texas' contribution to the development and evolution of the country and western genre. 
+Let us surmise that the majority of country and western music songs can be characterized by a combination of the following eight categories.
+1. Songs about drinking. 
+2. Songs about heartbreak.
+3. Songs about falling in love/being in love.
+4. Songs about rural life and/or urban withdrawal.
+5. Songs about family.
+6. Songs about country music itself.
+7. Songs about tragedy.
+8. Songs about religion.
+
+For example, In George Strait's hit All My Ex's Live in Texas, he reminisces on his childhood in Texas, tells us the towns in which his various exes live and explains that that is why he resides in Tennessee. Broadly speaking, the themes of the track are summarised by categories 2,4, and 6. I.e. Heartbreak (although the song's sound is rather jovial it is nonetheless about ex-partners), a longing for a simpler time in rural life (learning to swim in the Frio river), and an ode to the state of Texas, carrying with it a recognition of Texas' contribution to the development and evolution of the country and western genre. 
 
 ### Code
-#### top_five_lyrics.py
+#### 💿 top_five_lyrics.py
 This program first scrapes a Wikipedia page to create a list of the names of popular country music artists. Next a function is created using the LyricsGenius API wrapper that takes as its input an artists name and has as its output the text files of the lyrics to the artists top five songs on Genius.com. The list of artists from Wikipedia is sent to this function to download the top five songs of each artist in the list.
-#### topic_model.py
+#### 🔨 topic_model.py
 Now that we have a large collection of text files we can use them to train the machine learning tool MALLET. More specifically we'll use a MALLET wrapper to be able to use the tool with Python. Once trained, MALLET is used to display the words contained in each topic. We can further find which topics a song is most likely to relate to and can visualize our results as a heat map.
 
 ### Results
@@ -61,21 +60,22 @@ Now that we have a large collection of text files we can use them to train the m
 
 ### Discussion
 
-Each song in the heat map was chosen to represent a particular category as defined from the Hypothesis section. In the places of categories 1, 6, 7, and 8 we have respectievely Jonhy Lee's "Hey Bartender", Waylon Jennings' "Are You Sure Hank Would Have Done It This Way?", Tammy Wynette's "DIVORCE", and Phil Vassar's "This is God". 
-
+Each song in the heat map was chosen to represent a particular category as defined from the Hypothesis section. In the places of categories 1, 6, 7, and 8 we have respectively Johnny Lee's "Hey Bartender", Waylon Jennings' "Are You Sure Hank Would Have Done It This Way?", Tammy Wynette's "DIVORCE", and Phil Vassar's "This is God". 
+ 
 At a first glance, it's not immediately clear which topic belongs to which type of category. Take for example Johny Lee's Hey Bartender, a song that is  explicitly about drinking. According to the model, this song is most likely to belong to Topic 3. We might then assign Topic 3 as the Drinking category, **except** the words in the Topic 3 list do not make any reference to alcohol. We would probably need at least a 'beer' or 'whiskey' entry to justifiably give Topic 3 the Drinking label.
-
+ 
 All is not lost though. Topics 0, 2 and 5 all have 'love' as an entry, hinting that perhaps they correspond to one of the love categories. The heat map lends authority to this claim by showing Randy Travis' Forever and Ever Amen as most likely belonging to the category represented by Topic 0. Since Forever and Ever Amen was used as a placeholder for the *songs about falling in love* we can tentatively give Topic 0 this label. 
-
-Topic 2 also mentions 'jesus', 'believe, 'god, and is most correlated to Phil Vassar's This is God, our decidely religious song. Here again, we can tentatively give this topic the *songs about religion* label.
-
-Tammy Wynette's DIVORCE tells the tale of, you guessed it, a divorce. It could be argued that this song is a *song about heart break*, which is sort of true, but the story more so focuses on a mothers efforts to conceal an ugly divorce and custody battle from her young child. Now that's a sad country song! From the heat map we see that this song is most likely to fall under the Topic 1 umbrella. The list entries in Topic 1 include things like 'gone', 'miss', 'night', 'night', and 'christmas'. With this in mind, I think we can give this topic the *songs about tragedy* label. After all, everyone knows that a sad song is made even sadder if the events take place around the holidays.
-
-So that leaves *songs about heart break, rural life, family, and country music itself*. 
-
+ 
+Topic 2 also mentions 'jesus', 'believe, 'god, and is most correlated to Phil Vassars’ This is God, our decidedly religious song. Here again, we can tentatively give this topic the *songs about religion* label.
+ 
+Tammy Wynette's DIVORCE tells the tale of, you guessed it, a divorce. It could be argued that this song is a *song about heartbreak*, which is sort of true, but the story more so focuses on a mothers efforts to conceal an ugly divorce and custody battle from her young child. Now that's a sad country song! From the heat map we see that this song is most likely to fall under the Topic 1 umbrella. The list entries in Topic 1 include things like 'gone', 'miss', 'night', 'night', and 'christmas'. With this in mind, I think we can give this topic the *songs about tragedy* label. After all, everyone knows that a sad song is made even sadder if the events take place around the holidays.
+ 
+So that leaves *songs about heartbreak, rural life, family, and country music itself*. 
+ 
 Even though Alan Jackson's Drive is about remembering the fond memories his father gave him as a kid, I think this theme is overshadowed by the nature of the memories themselves, e.g. steering a boat, driving a truck, etc. Perhaps this was a less than ideal choice to represent the *songs about family* category. Nonetheless, Topic 6 contains both 'mamma' and 'daddy' as entries making it a strong candidate for *songs about family*. 
-
+ 
 I feel like Topics 4 and 7 are almost two sides of the same coin but that Topic 7 is almost like the more mature, older, and wiser version of Topic 4. While Topic 4 concerns itself with 'country', 'trucks', and 'roads', Topic 7 thinks more about 'land', 'trains', and 'river'. The entries in both topics elicit images of nature and rural life. I'm tempted to label these categories as *modern rural nostalgia* and *oldies rural nostalgia*.
+
 
 #### Thus we have,
 ```
@@ -111,5 +111,7 @@ I feel like Topics 4 and 7 are almost two sides of the same coin but that Topic 
 
 ['come', 'heaven', 'lord', 'one', 'day', 'home', 'need', 'away', 'well', 'take', 'land', 'texas', 'devil', 'river', 'angel', 'train', 'wind', 'soul', 'blue', 'water']
 ```
-### Comments
  
+While a fun first foray into topic modelling, I would hesitate to say that there is enough evidence to support the findings of this exercise. The biggest factor impacting the results is the contents of the original list of artists that is scraped from Wikipedia. Apart from the age-old advice that Wikipedia is not a credible source, the scraping code fails to take into account the artists listed before the Early 1980s country-music performers header. This unfortunately leads to songs like Kid Rock's "Bawitdaba" being included in the analysis while someone like Townes Van Zandt is left out. It's also worth noting that the overwhelming majority of artists in the list are white. While true, a lot of white people do make country music, it's not to say that they're the only ones. This topic is really greatly explored in Jamal Khadar's monthly radio show Reimagining Country. The root of the problem lies in how you define country music from the onset. It's easy to scrape the first list you find online of the "Top 100 Country Artists of All Time '' but much harder to curate a balanced and nuanced list of artists on your own.
+
+A more rigorous analysis would have a higher quality list of artists to choose from and would ideally include many more songs/text files from each artist. It would also be interesting to explore how the topics change over time. For example, how do the cultural themes of the 60's, 70's, etc. impact the topics of country songs from that era.
